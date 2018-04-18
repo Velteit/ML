@@ -1,0 +1,1465 @@
+2018-04-17 22:38:20 - // include directory, this will be replaced by the kernel
+2018-04-17 22:38:20 - #I "/usr/local/ifsharp"
+2018-04-17 22:38:20 - // load base dlls
+2018-04-17 22:38:20 - #r "IfSharp.Kernel.dll"
+2018-04-17 22:38:20 - #r "NetMQ.dll"
+2018-04-17 22:38:20 - // open the global functions and methods
+2018-04-17 22:38:20 - open IfSharp.Kernel
+2018-04-17 22:38:20 - open IfSharp.Kernel.Globals
+2018-04-17 22:38:23 - F# Interactive for F# 4.1
+2018-04-17 22:38:23 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 22:38:23 - For help type #help;;
+2018-04-17 22:38:23 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 22:38:23 -   seq []
+2018-04-17 22:38:23 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 22:38:23 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 22:38:23 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 22:39:30 - #load "Paket.fsx"
+2018-04-17 22:39:30 - Paket.Package [
+2018-04-17 22:39:30 -     "FsLab"
+2018-04-17 22:39:30 - ]
+2018-04-17 22:39:30 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 22:45:38 - #load "Paket.fsx"
+2018-04-17 22:45:38 - Paket.Package [
+2018-04-17 22:45:38 -     "FsLab"
+2018-04-17 22:45:38 - ]
+2018-04-17 22:45:38 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 22:45:41 - #load "Paket.fsx"
+2018-04-17 22:45:41 - Paket.Package [
+2018-04-17 22:45:41 -     "FsLab"
+2018-04-17 22:45:41 - ]
+2018-04-17 22:45:41 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 22:45:43 - #load "Paket.fsx"
+2018-04-17 22:45:43 - Paket.Package [
+2018-04-17 22:45:43 -     "FsLab"
+2018-04-17 22:45:43 - ]
+2018-04-17 22:45:43 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 22:47:00 - let combine (a: string seq) = System.IO.Path.Combine(a |> Seq.toArray)
+2018-04-17 22:47:00 - let path = Environment.CurrentDirectory
+2018-04-17 22:47:00 - The value, namespace, type or module 'Environment' is not defined.
+2018-04-17 22:47:15 - open System
+2018-04-17 22:47:15 - let combine (a: string seq) = System.IO.Path.Combine(a |> Seq.toArray)
+2018-04-17 22:47:15 - let path = Environment.CurrentDirectory
+2018-04-17 22:47:21 - open System
+2018-04-17 22:47:21 - let combine (a: string seq) = System.IO.Path.Combine(a |> Seq.toArray)
+2018-04-17 22:47:21 - let path = Environment.CurrentDirectory
+2018-04-17 22:47:21 - path
+2018-04-17 22:50:58 - open Deedle
+2018-04-17 22:50:58 - let train = Frame.ReadCsv(combine [path; "datasets"; "train.csv"])
+2018-04-17 22:50:58 - train
+2018-04-17 22:52:48 - This method is not intended for use from F#.
+2018-04-17 22:52:48 - This method is not intended for use from F#.
+2018-04-17 22:52:49 - open Deedle
+2018-04-17 22:52:49 - let train = Frame.ReadCsv(combine [path; "datasets"; "train.csv"])
+2018-04-17 22:52:49 - train
+2018-04-17 22:53:29 - // include directory, this will be replaced by the kernel
+2018-04-17 22:53:29 - #I "/usr/local/ifsharp"
+2018-04-17 22:53:29 - // load base dlls
+2018-04-17 22:53:29 - #r "IfSharp.Kernel.dll"
+2018-04-17 22:53:29 - #r "NetMQ.dll"
+2018-04-17 22:53:29 - // open the global functions and methods
+2018-04-17 22:53:29 - open IfSharp.Kernel
+2018-04-17 22:53:29 - open IfSharp.Kernel.Globals
+2018-04-17 22:53:32 - F# Interactive for F# 4.1
+2018-04-17 22:53:32 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 22:53:32 - For help type #help;;
+2018-04-17 22:53:32 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 22:53:32 -   seq []
+2018-04-17 22:53:32 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 22:53:32 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 22:53:32 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 22:54:06 - #load "Paket.fsx"
+2018-04-17 22:54:06 - Paket.Package [
+2018-04-17 22:54:06 -     "FsLab"
+2018-04-17 22:54:06 - ]
+2018-04-17 22:54:06 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 22:54:06 - #load "packages/FsLab/FsLab.fsx"
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../Deedle.1.0.7/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../Deedle.RPlugin.1.0.7/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../FSharp.Charting.0.90.10/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../FSharp.Data.2.2.0/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../Foogle.Charts.0.0.5/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../MathNet.Numerics.3.6.0/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../MathNet.Numerics.FSharp.3.6.0/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../RProvider.1.1.8/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../R.NET.Community.1.5.16/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../R.NET.Community.FSharp.0.1.9/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../Deedle.1.0.7/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../Deedle.RPlugin.1.0.7/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../FSharp.Charting.0.90.10/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../FSharp.Data.2.2.0/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../Foogle.Charts.0.0.5/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../MathNet.Numerics.3.6.0/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../MathNet.Numerics.FSharp.3.6.0/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../RProvider.1.1.8/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../R.NET.Community.1.5.16/lib/net40' could not be found
+2018-04-17 22:54:11 - The search directory '/usr/local/ifsharp/packages/FsLab/../R.NET.Community.FSharp.0.1.9/lib/net40' could not be found
+2018-04-17 22:54:11 - #load "Paket.fsx"
+2018-04-17 22:54:11 - Paket.Package [
+2018-04-17 22:54:11 -     "FsLab"
+2018-04-17 22:54:11 - ]
+2018-04-17 22:54:11 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 22:54:11 - #load "packages/FsLab/FsLab.fsx"
+2018-04-17 22:54:13 - #load "Paket.fsx"
+2018-04-17 22:54:13 - Paket.Package [
+2018-04-17 22:54:13 -     "FsLab"
+2018-04-17 22:54:13 - ]
+2018-04-17 22:54:13 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 22:54:13 - #load "packages/FsLab/FsLab.fsx"
+2018-04-17 22:54:15 - #load "Paket.fsx"
+2018-04-17 22:54:15 - Paket.Package [
+2018-04-17 22:54:15 -     "FsLab"
+2018-04-17 22:54:15 - ]
+2018-04-17 22:54:15 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 22:54:15 - #load "packages/FsLab/FsLab.fsx"
+2018-04-17 22:54:22 - open System
+2018-04-17 22:54:22 - let combine (a: string seq) = System.IO.Path.Combine(a |> Seq.toArray)
+2018-04-17 22:54:22 - let path = Environment.CurrentDirectory
+2018-04-17 22:54:22 - path
+2018-04-17 22:54:23 - open System
+2018-04-17 22:54:23 - let combine (a: string seq) = System.IO.Path.Combine(a |> Seq.toArray)
+2018-04-17 22:54:23 - let path = Environment.CurrentDirectory
+2018-04-17 22:54:23 - path
+2018-04-17 22:54:32 - open Deedle
+2018-04-17 22:54:32 - let train = Frame.ReadCsv(combine [path; "datasets"; "train.csv"])
+2018-04-17 22:54:32 - train
+2018-04-17 22:56:11 - // include directory, this will be replaced by the kernel
+2018-04-17 22:56:11 - #I "/usr/local/ifsharp"
+2018-04-17 22:56:11 - // load base dlls
+2018-04-17 22:56:11 - #r "IfSharp.Kernel.dll"
+2018-04-17 22:56:11 - #r "NetMQ.dll"
+2018-04-17 22:56:11 - // open the global functions and methods
+2018-04-17 22:56:11 - open IfSharp.Kernel
+2018-04-17 22:56:11 - open IfSharp.Kernel.Globals
+2018-04-17 22:56:14 - F# Interactive for F# 4.1
+2018-04-17 22:56:14 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 22:56:14 - For help type #help;;
+2018-04-17 22:56:14 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 22:56:14 -   seq []
+2018-04-17 22:56:14 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 22:56:14 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 22:56:14 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:12:12 - shutdown request
+2018-04-17 23:12:12 - // include directory, this will be replaced by the kernel
+2018-04-17 23:12:12 - #I "/usr/local/ifsharp"
+2018-04-17 23:12:12 - // load base dlls
+2018-04-17 23:12:12 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:12:12 - #r "NetMQ.dll"
+2018-04-17 23:12:12 - // open the global functions and methods
+2018-04-17 23:12:12 - open IfSharp.Kernel
+2018-04-17 23:12:12 - open IfSharp.Kernel.Globals
+2018-04-17 23:12:15 - F# Interactive for F# 4.1
+2018-04-17 23:12:15 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 23:12:15 - For help type #help;;
+2018-04-17 23:12:15 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 23:12:15 -   seq []
+2018-04-17 23:12:15 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 23:12:15 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:12:15 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:12:19 - #load "Paket.fsx"
+2018-04-17 23:12:19 - Paket.Package [
+2018-04-17 23:12:19 -     "FsLab"
+2018-04-17 23:12:19 - ]
+2018-04-17 23:12:19 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 23:12:19 - #load "packages/FsLab/FsLab.fsx"
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../Deedle.1.0.7/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../Deedle.RPlugin.1.0.7/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../FSharp.Charting.0.90.10/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../FSharp.Data.2.2.0/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../Foogle.Charts.0.0.5/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../MathNet.Numerics.3.6.0/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../MathNet.Numerics.FSharp.3.6.0/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../RProvider.1.1.8/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../R.NET.Community.1.5.16/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../R.NET.Community.FSharp.0.1.9/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../Deedle.1.0.7/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../Deedle.RPlugin.1.0.7/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../FSharp.Charting.0.90.10/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../FSharp.Data.2.2.0/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../Foogle.Charts.0.0.5/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../MathNet.Numerics.3.6.0/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../MathNet.Numerics.FSharp.3.6.0/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../RProvider.1.1.8/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../R.NET.Community.1.5.16/lib/net40' could not be found
+2018-04-17 23:12:24 - The search directory '/usr/local/ifsharp/packages/FsLab/../R.NET.Community.FSharp.0.1.9/lib/net40' could not be found
+2018-04-17 23:12:52 - #load "Paket.fsx"
+2018-04-17 23:12:52 - Paket.Package [
+2018-04-17 23:12:52 -     "FsLab"
+2018-04-17 23:12:52 - ]
+2018-04-17 23:12:52 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 23:13:03 - open System
+2018-04-17 23:13:03 - let combine (a: string seq) = System.IO.Path.Combine(a |> Seq.toArray)
+2018-04-17 23:13:03 - let path = Environment.CurrentDirectory
+2018-04-17 23:13:03 - path
+2018-04-17 23:13:06 - open FSharp.Data
+2018-04-17 23:13:06 - open FSharp.Data.CsvExtensions
+2018-04-17 23:13:06 - open MathNet.Numerics.LinearAlgebra
+2018-04-17 23:13:06 - //returns a sequence of array, first index is a pixel array, second index is a one item label array
+2018-04-17 23:13:06 - //extract and split parsed value from csv to train/test x matrix and y vector
+2018-04-17 23:13:06 - let loadDataset (input: CsvFile) =
+2018-04-17 23:13:06 -     let parseCsv (x: CsvFile) =
+2018-04-17 23:13:06 -         [|
+2018-04-17 23:13:06 -             for row in x.Rows ->
+2018-04-17 23:13:06 -                 let rowValues = 
+2018-04-17 23:13:06 -                     row.Columns
+2018-04-17 23:13:06 -                     |> Seq.map float
+2018-04-17 23:13:06 -                     |> Seq.toArray
+2018-04-17 23:13:06 -                 let pixelsValues = rowValues.[1..]
+2018-04-17 23:13:06 -                 let labelValues = rowValues.[0]
+2018-04-17 23:13:06 -                 (labelValues, pixelsValues)
+2018-04-17 23:13:06 -         |]
+2018-04-17 23:13:06 -     let extractY (input: (int*int) [||]) =  
+2018-04-17 23:13:06 -         input
+2018-04-17 23:13:06 -         |> Array.map fst
+2018-04-17 23:13:06 -     let extractX (input: (int*int) [||]) =
+2018-04-17 23:13:06 -         input 
+2018-04-17 23:13:06 -         |> Array.map snd
+2018-04-17 23:13:06 -     let parsedRows = parse_csv train
+2018-04-17 23:13:06 -     
+2018-04-17 23:13:06 -                 
+2018-04-17 23:13:06 -     let x = extractX parsedRows |> DenseMatrix.ofColumnArrays
+2018-04-17 23:13:06 -     let y = extractY parsedRows |> DenseVector.ofArray
+2018-04-17 23:13:06 -     
+2018-04-17 23:13:06 -     
+2018-04-17 23:13:06 -     x, y
+2018-04-17 23:13:06 -       
+2018-04-17 23:13:06 - //building our datasets
+2018-04-17 23:13:06 - let train = CsvFile.Load(combine [path; "datasets"; "train.csv"], ",", ''', false, true, 0)
+2018-04-17 23:13:06 - let test =  CsvFile.Load(combine [path; "datasets"; "test.csv"], ",", ''', false, true, 0)
+2018-04-17 23:13:06 - let shape = fun (matrix:Matrix<float>) -> matrix.RowCount, matrix.ColumnCount
+2018-04-17 23:13:06 - let trainX, trainY = loadDataset train
+2018-04-17 23:13:06 - let testX, testY = loadDataset test
+2018-04-17 23:13:06 - Unexpected symbol '[|' in pattern. Expected ')' or other token.
+2018-04-17 23:13:06 - Unmatched '('
+2018-04-17 23:13:06 - Unexpected symbol '[|' in pattern. Expected ')' or other token.
+2018-04-17 23:13:06 - Unmatched '('
+2018-04-17 23:13:06 - Type mismatch. Expecting a
+2018-04-17 23:13:06 -     'int * int -> 'd'    
+2018-04-17 23:13:06 - but given a
+2018-04-17 23:13:06 -     '(obj * obj) [] -> obj []'    
+2018-04-17 23:13:06 - The type 'int * int' does not match the type '(obj * obj) []'
+2018-04-17 23:13:06 - Type mismatch. Expecting a
+2018-04-17 23:13:06 -     'int * int -> 'd'    
+2018-04-17 23:13:06 - but given a
+2018-04-17 23:13:06 -     '(obj * obj) [] -> obj []'    
+2018-04-17 23:13:06 - The type 'int * int' does not match the type '(obj * obj) []'
+2018-04-17 23:13:06 - Incomplete pattern matches on this expression. For example, the value '[|_|]' may indicate a case not covered by the pattern(s).
+2018-04-17 23:13:06 - Type mismatch. Expecting a
+2018-04-17 23:13:06 -     'int * int -> 'd'    
+2018-04-17 23:13:06 - but given a
+2018-04-17 23:13:06 -     '(obj * obj) [] -> obj []'    
+2018-04-17 23:13:06 - The type 'int * int' does not match the type '(obj * obj) []'
+2018-04-17 23:13:06 - Type mismatch. Expecting a
+2018-04-17 23:13:06 -     'int * int -> 'd'    
+2018-04-17 23:13:06 - but given a
+2018-04-17 23:13:06 -     '(obj * obj) [] -> obj []'    
+2018-04-17 23:13:06 - The type 'int * int' does not match the type '(obj * obj) []'
+2018-04-17 23:13:06 - Incomplete pattern matches on this expression. For example, the value '[|_|]' may indicate a case not covered by the pattern(s).
+2018-04-17 23:13:06 - The value or constructor 'parse_csv' is not defined. Maybe you want one of the following:
+2018-04-17 23:13:06 -    parseCsv
+2018-04-17 23:13:06 - Type mismatch. Expecting a
+2018-04-17 23:13:06 -     '(obj [] -> obj) -> 'a'    
+2018-04-17 23:13:06 - but given a
+2018-04-17 23:13:06 -     'int [] [] -> Matrix<int>'    
+2018-04-17 23:13:06 - The type 'obj [] -> obj' does not match the type 'int [] []'
+2018-04-17 23:13:06 - Type mismatch. Expecting a
+2018-04-17 23:13:06 -     '(obj [] -> obj) -> 'b'    
+2018-04-17 23:13:06 - but given a
+2018-04-17 23:13:06 -     'int array -> Vector<int>'    
+2018-04-17 23:13:06 - The type 'obj [] -> obj' does not match the type 'int array'
+2018-04-17 23:14:06 - open FSharp.Data
+2018-04-17 23:14:06 - open FSharp.Data.CsvExtensions
+2018-04-17 23:14:06 - open MathNet.Numerics.LinearAlgebra
+2018-04-17 23:14:06 - //returns a sequence of array, first index is a pixel array, second index is a one item label array
+2018-04-17 23:14:06 - //extract and split parsed value from csv to train/test x matrix and y vector
+2018-04-17 23:14:06 - let loadDataset (input: CsvFile) =
+2018-04-17 23:14:06 -     let parseCsv (x: CsvFile) =
+2018-04-17 23:14:06 -         [|for row in x.Rows ->
+2018-04-17 23:14:06 -                 let rowValues = 
+2018-04-17 23:14:06 -                     row.Columns
+2018-04-17 23:14:06 -                     |> Seq.map float
+2018-04-17 23:14:06 -                     |> Seq.toArray
+2018-04-17 23:14:06 -                 let pixelsValues = rowValues.[1..]
+2018-04-17 23:14:06 -                 let labelValues = rowValues.[0]
+2018-04-17 23:14:06 -                 (labelValues, pixelsValues)|]
+2018-04-17 23:14:06 -     let extractY (input: (int*int) []) =  
+2018-04-17 23:14:06 -         input
+2018-04-17 23:14:06 -         |> Array.map fst
+2018-04-17 23:14:06 -     let extractX (input: (int*int) []) =
+2018-04-17 23:14:06 -         input 
+2018-04-17 23:14:06 -         |> Array.map snd
+2018-04-17 23:14:06 -     let parsedRows = parse_csv train
+2018-04-17 23:14:06 -     
+2018-04-17 23:14:06 -                 
+2018-04-17 23:14:06 -     let x = extractX parsedRows |> DenseMatrix.ofColumnArrays
+2018-04-17 23:14:06 -     let y = extractY parsedRows |> DenseVector.ofArray
+2018-04-17 23:14:06 -     
+2018-04-17 23:14:06 -     
+2018-04-17 23:14:06 -     x, y
+2018-04-17 23:14:06 -       
+2018-04-17 23:14:06 - //building our datasets
+2018-04-17 23:14:06 - let train = CsvFile.Load(combine [path; "datasets"; "train.csv"], ",", ''', false, true, 0)
+2018-04-17 23:14:06 - let test =  CsvFile.Load(combine [path; "datasets"; "test.csv"], ",", ''', false, true, 0)
+2018-04-17 23:14:06 - let shape = fun (matrix:Matrix<float>) -> matrix.RowCount, matrix.ColumnCount
+2018-04-17 23:14:06 - let trainX, trainY = loadDataset train
+2018-04-17 23:14:06 - let testX, testY = loadDataset test
+2018-04-17 23:14:06 - The value or constructor 'parse_csv' is not defined. Maybe you want one of the following:
+2018-04-17 23:14:06 -    parseCsv
+2018-04-17 23:14:06 - Type mismatch. Expecting a
+2018-04-17 23:14:06 -     'int [] -> 'a'    
+2018-04-17 23:14:06 - but given a
+2018-04-17 23:14:06 -     'int [] [] -> Matrix<int>'    
+2018-04-17 23:14:06 - The type 'int' does not match the type 'int []'
+2018-04-17 23:14:18 - open FSharp.Data
+2018-04-17 23:14:18 - open FSharp.Data.CsvExtensions
+2018-04-17 23:14:18 - open MathNet.Numerics.LinearAlgebra
+2018-04-17 23:14:18 - //returns a sequence of array, first index is a pixel array, second index is a one item label array
+2018-04-17 23:14:18 - //extract and split parsed value from csv to train/test x matrix and y vector
+2018-04-17 23:14:18 - let loadDataset (input: CsvFile) =
+2018-04-17 23:14:18 -     let parseCsv (x: CsvFile) =
+2018-04-17 23:14:18 -         [|for row in x.Rows ->
+2018-04-17 23:14:18 -                 let rowValues = 
+2018-04-17 23:14:18 -                     row.Columns
+2018-04-17 23:14:18 -                     |> Seq.map float
+2018-04-17 23:14:18 -                     |> Seq.toArray
+2018-04-17 23:14:18 -                 let pixelsValues = rowValues.[1..]
+2018-04-17 23:14:18 -                 let labelValues = rowValues.[0]
+2018-04-17 23:14:18 -                 (labelValues, pixelsValues)|]
+2018-04-17 23:14:18 -     let extractY (input: (int*int) []) =  
+2018-04-17 23:14:18 -         input
+2018-04-17 23:14:18 -         |> Array.map fst
+2018-04-17 23:14:18 -     let extractX (input: (int*int) []) =
+2018-04-17 23:14:18 -         input 
+2018-04-17 23:14:18 -         |> Array.map snd
+2018-04-17 23:14:18 -     let parsedRows = parseCsv train
+2018-04-17 23:14:18 -     
+2018-04-17 23:14:18 -                 
+2018-04-17 23:14:18 -     let x = extractX parsedRows |> DenseMatrix.ofColumnArrays
+2018-04-17 23:14:18 -     let y = extractY parsedRows |> DenseVector.ofArray
+2018-04-17 23:14:18 -     
+2018-04-17 23:14:18 -     
+2018-04-17 23:14:18 -     x, y
+2018-04-17 23:14:18 -       
+2018-04-17 23:14:18 - //building our datasets
+2018-04-17 23:14:18 - let train = CsvFile.Load(combine [path; "datasets"; "train.csv"], ",", ''', false, true, 0)
+2018-04-17 23:14:18 - let test =  CsvFile.Load(combine [path; "datasets"; "test.csv"], ",", ''', false, true, 0)
+2018-04-17 23:14:18 - let shape = fun (matrix:Matrix<float>) -> matrix.RowCount, matrix.ColumnCount
+2018-04-17 23:14:18 - let trainX, trainY = loadDataset train
+2018-04-17 23:14:18 - let testX, testY = loadDataset test
+2018-04-17 23:14:18 - The value or constructor 'train' is not defined. Maybe you want one of the following:
+2018-04-17 23:14:18 -    tan
+2018-04-17 23:14:18 -    Threading
+2018-04-17 23:14:18 -    Main
+2018-04-17 23:14:18 - Type mismatch. Expecting a
+2018-04-17 23:14:18 -     '(int * int) []'    
+2018-04-17 23:14:18 - but given a
+2018-04-17 23:14:18 -     '(float * float []) []'    
+2018-04-17 23:14:18 - The type 'int' does not match the type 'float'
+2018-04-17 23:14:18 - Type mismatch. Expecting a
+2018-04-17 23:14:18 -     'int [] -> 'a'    
+2018-04-17 23:14:18 - but given a
+2018-04-17 23:14:18 -     'int [] [] -> Matrix<int>'    
+2018-04-17 23:14:18 - The type 'int' does not match the type 'int []'
+2018-04-17 23:14:18 - Type mismatch. Expecting a
+2018-04-17 23:14:18 -     '(int * int) []'    
+2018-04-17 23:14:18 - but given a
+2018-04-17 23:14:18 -     '(float * float []) []'    
+2018-04-17 23:14:18 - The type 'int' does not match the type 'float'
+2018-04-17 23:15:03 - open FSharp.Data
+2018-04-17 23:15:03 - open FSharp.Data.CsvExtensions
+2018-04-17 23:15:03 - open MathNet.Numerics.LinearAlgebra
+2018-04-17 23:15:03 - //returns a sequence of array, first index is a pixel array, second index is a one item label array
+2018-04-17 23:15:03 - //extract and split parsed value from csv to train/test x matrix and y vector
+2018-04-17 23:15:03 - let loadDataset (input: CsvFile) =
+2018-04-17 23:15:03 -     let parseCsv (x: CsvFile) =
+2018-04-17 23:15:03 -         [|for row in x.Rows ->
+2018-04-17 23:15:03 -                 let rowValues = 
+2018-04-17 23:15:03 -                     row.Columns
+2018-04-17 23:15:03 -                     |> Seq.map float
+2018-04-17 23:15:03 -                     |> Seq.toArray
+2018-04-17 23:15:03 -                 let pixelsValues = rowValues.[1..]
+2018-04-17 23:15:03 -                 let labelValues = rowValues.[0]
+2018-04-17 23:15:03 -                 (labelValues, pixelsValues)|]
+2018-04-17 23:15:03 -     let extractY (input: (float*float) []) =  
+2018-04-17 23:15:03 -         input
+2018-04-17 23:15:03 -         |> Array.map fst
+2018-04-17 23:15:03 -     let extractX (input: (float*float) []) =
+2018-04-17 23:15:03 -         input 
+2018-04-17 23:15:03 -         |> Array.map snd
+2018-04-17 23:15:03 -     let parsedRows = parseCsv train
+2018-04-17 23:15:03 -     
+2018-04-17 23:15:03 -                 
+2018-04-17 23:15:03 -     let x = extractX parsedRows |> DenseMatrix.ofColumnArrays
+2018-04-17 23:15:03 -     let y = extractY parsedRows |> DenseVector.ofArray
+2018-04-17 23:15:03 -     
+2018-04-17 23:15:03 -     
+2018-04-17 23:15:03 -     x, y
+2018-04-17 23:15:03 -       
+2018-04-17 23:15:03 - //building our datasets
+2018-04-17 23:15:03 - let train = CsvFile.Load(combine [path; "datasets"; "train.csv"], ",", ''', false, true, 0)
+2018-04-17 23:15:03 - let test =  CsvFile.Load(combine [path; "datasets"; "test.csv"], ",", ''', false, true, 0)
+2018-04-17 23:15:03 - let shape = fun (matrix:Matrix<float>) -> matrix.RowCount, matrix.ColumnCount
+2018-04-17 23:15:03 - let trainX, trainY = loadDataset train
+2018-04-17 23:15:03 - let testX, testY = loadDataset test
+2018-04-17 23:15:03 - The value or constructor 'train' is not defined. Maybe you want one of the following:
+2018-04-17 23:15:03 -    tan
+2018-04-17 23:15:03 -    Threading
+2018-04-17 23:15:03 -    Main
+2018-04-17 23:15:03 - Type mismatch. Expecting a
+2018-04-17 23:15:03 -     '(float * float) []'    
+2018-04-17 23:15:03 - but given a
+2018-04-17 23:15:03 -     '(float * float []) []'    
+2018-04-17 23:15:03 - The type 'float' does not match the type 'float []'
+2018-04-17 23:15:03 - Type mismatch. Expecting a
+2018-04-17 23:15:03 -     'float [] -> 'a'    
+2018-04-17 23:15:03 - but given a
+2018-04-17 23:15:03 -     'int [] [] -> Matrix<int>'    
+2018-04-17 23:15:03 - The type 'float' does not match the type 'int []'
+2018-04-17 23:15:03 - Type mismatch. Expecting a
+2018-04-17 23:15:03 -     '(float * float) []'    
+2018-04-17 23:15:03 - but given a
+2018-04-17 23:15:03 -     '(float * float []) []'    
+2018-04-17 23:15:03 - The type 'float' does not match the type 'float []'
+2018-04-17 23:15:29 - open FSharp.Data
+2018-04-17 23:15:29 - open FSharp.Data.CsvExtensions
+2018-04-17 23:15:29 - open MathNet.Numerics.LinearAlgebra
+2018-04-17 23:15:29 - //returns a sequence of array, first index is a pixel array, second index is a one item label array
+2018-04-17 23:15:29 - //extract and split parsed value from csv to train/test x matrix and y vector
+2018-04-17 23:15:29 - let loadDataset (input: CsvFile) =
+2018-04-17 23:15:29 -     let parseCsv (x: CsvFile) =
+2018-04-17 23:15:29 -         [|for row in x.Rows ->
+2018-04-17 23:15:29 -                 let rowValues = 
+2018-04-17 23:15:29 -                     row.Columns
+2018-04-17 23:15:29 -                     |> Seq.map float
+2018-04-17 23:15:29 -                     |> Seq.toArray
+2018-04-17 23:15:29 -                 let pixelsValues = rowValues.[1..]
+2018-04-17 23:15:29 -                 let labelValues = rowValues.[0]
+2018-04-17 23:15:29 -                 (labelValues, pixelsValues)|]
+2018-04-17 23:15:29 -     let extractY (input: (float*float[]) []) =  
+2018-04-17 23:15:29 -         input
+2018-04-17 23:15:29 -         |> Array.map fst
+2018-04-17 23:15:29 -     let extractX (input: (float*float[]) []) =
+2018-04-17 23:15:29 -         input 
+2018-04-17 23:15:29 -         |> Array.map snd
+2018-04-17 23:15:29 -     let parsedRows = parseCsv train
+2018-04-17 23:15:29 -     
+2018-04-17 23:15:29 -                 
+2018-04-17 23:15:29 -     let x = extractX parsedRows |> DenseMatrix.ofColumnArrays
+2018-04-17 23:15:29 -     let y = extractY parsedRows |> DenseVector.ofArray
+2018-04-17 23:15:29 -     
+2018-04-17 23:15:29 -     
+2018-04-17 23:15:29 -     x, y
+2018-04-17 23:15:29 -       
+2018-04-17 23:15:29 - //building our datasets
+2018-04-17 23:15:29 - let train = CsvFile.Load(combine [path; "datasets"; "train.csv"], ",", ''', false, true, 0)
+2018-04-17 23:15:29 - let test =  CsvFile.Load(combine [path; "datasets"; "test.csv"], ",", ''', false, true, 0)
+2018-04-17 23:15:29 - let shape = fun (matrix:Matrix<float>) -> matrix.RowCount, matrix.ColumnCount
+2018-04-17 23:15:29 - let trainX, trainY = loadDataset train
+2018-04-17 23:15:29 - let testX, testY = loadDataset test
+2018-04-17 23:15:30 - The value or constructor 'train' is not defined. Maybe you want one of the following:
+2018-04-17 23:15:30 -    tan
+2018-04-17 23:15:30 -    Threading
+2018-04-17 23:15:30 -    Main
+2018-04-17 23:15:56 - open FSharp.Data
+2018-04-17 23:15:56 - open FSharp.Data.CsvExtensions
+2018-04-17 23:15:56 - open MathNet.Numerics.LinearAlgebra
+2018-04-17 23:15:56 - //returns a sequence of array, first index is a pixel array, second index is a one item label array
+2018-04-17 23:15:56 - //extract and split parsed value from csv to train/test x matrix and y vector
+2018-04-17 23:15:56 - let loadDataset (input: CsvFile) =
+2018-04-17 23:15:56 -     let parseCsv (x: CsvFile) =
+2018-04-17 23:15:56 -         [|for row in x.Rows ->
+2018-04-17 23:15:56 -                 let rowValues = 
+2018-04-17 23:15:56 -                     row.Columns
+2018-04-17 23:15:56 -                     |> Seq.map float
+2018-04-17 23:15:56 -                     |> Seq.toArray
+2018-04-17 23:15:56 -                 let pixelsValues = rowValues.[1..]
+2018-04-17 23:15:56 -                 let labelValues = rowValues.[0]
+2018-04-17 23:15:56 -                 (labelValues, pixelsValues)|]
+2018-04-17 23:15:56 -     let extractY (input: (float*float[]) []) =  
+2018-04-17 23:15:56 -         input
+2018-04-17 23:15:56 -         |> Array.map fst
+2018-04-17 23:15:56 -     let extractX (input: (float*float[]) []) =
+2018-04-17 23:15:56 -         input 
+2018-04-17 23:15:56 -         |> Array.map snd
+2018-04-17 23:15:56 -     let parsedRows = parseCsv input
+2018-04-17 23:15:56 -     
+2018-04-17 23:15:56 -                 
+2018-04-17 23:15:56 -     let x = extractX parsedRows |> DenseMatrix.ofColumnArrays
+2018-04-17 23:15:56 -     let y = extractY parsedRows |> DenseVector.ofArray
+2018-04-17 23:15:56 -     
+2018-04-17 23:15:56 -     
+2018-04-17 23:15:56 -     x, y
+2018-04-17 23:15:56 - let shape = fun (matrix:Matrix<float>) -> matrix.RowCount, matrix.ColumnCount
+2018-04-17 23:15:56 - //building our datasets
+2018-04-17 23:15:56 - let train = CsvFile.Load(combine [path; "datasets"; "train.csv"], ",", ''', false, true, 0)
+2018-04-17 23:15:56 - let test =  CsvFile.Load(combine [path; "datasets"; "test.csv"], ",", ''', false, true, 0)
+2018-04-17 23:15:56 - let trainX, trainY = loadDataset train
+2018-04-17 23:15:56 - let testX, testY = loadDataset test
+2018-04-17 23:18:32 - open System.Drawing
+2018-04-17 23:18:32 - let showPicture (matrix:Matrix<float>) (index:int) (filename:string) =
+2018-04-17 23:18:32 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:18:32 -     let mutable i = 0
+2018-04-17 23:18:32 -     let mutable line = -1
+2018-04-17 23:18:32 -     let mutable vectorIndex = 0
+2018-04-17 23:18:32 -     let bitmap = new Bitmap(64, 64)
+2018-04-17 23:18:32 -     while vectorIndex < pixelVector.Count - 3 do 
+2018-04-17 23:18:32 -         if i % 64 = 0 then
+2018-04-17 23:18:32 -             i <- 0
+2018-04-17 23:18:32 -             line <- line + 1
+2018-04-17 23:18:32 -             
+2018-04-17 23:18:32 -         bitmap.SetPixel(i, line, Color.FromArgb(
+2018-04-17 23:18:32 -                                                 int pixelVector.[vectorIndex],
+2018-04-17 23:18:32 -                                                 int pixelVector.[vectorIndex + 1],
+2018-04-17 23:18:32 -                                                 int pixelVector.[vectorIndex + 2]))
+2018-04-17 23:18:32 -         vectorIndex <- vectorIndex + 3
+2018-04-17 23:18:32 -         i <- i + 1
+2018-04-17 23:18:32 -     bitmap.Save([path; "images"; filename])
+2018-04-17 23:18:32 -     sprintf "<img src='%s' style='width:128;height:128;'>" (combine ["images"; filename])
+2018-04-17 23:18:32 -     |> Util.Html
+2018-04-17 23:18:32 -     |> Display
+2018-04-17 23:18:32 - This expression was expected to have type
+2018-04-17 23:18:32 -     'string'    
+2018-04-17 23:18:32 - but here has type
+2018-04-17 23:18:32 -     ''a list'    
+2018-04-17 23:19:07 - open System.Drawing
+2018-04-17 23:19:07 - let showPicture (matrix:Matrix<float>) (index:int) (filename:string) =
+2018-04-17 23:19:07 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:19:07 -     let mutable i = 0
+2018-04-17 23:19:07 -     let mutable line = -1
+2018-04-17 23:19:07 -     let mutable vectorIndex = 0
+2018-04-17 23:19:07 -     let bitmap = new Bitmap(64, 64)
+2018-04-17 23:19:07 -     while vectorIndex < pixelVector.Count - 3 do 
+2018-04-17 23:19:07 -         if i % 64 = 0 then
+2018-04-17 23:19:07 -             i <- 0
+2018-04-17 23:19:07 -             line <- line + 1
+2018-04-17 23:19:07 -             
+2018-04-17 23:19:07 -         bitmap.SetPixel(i, line, Color.FromArgb(
+2018-04-17 23:19:07 -                                                 int pixelVector.[vectorIndex],
+2018-04-17 23:19:07 -                                                 int pixelVector.[vectorIndex + 1],
+2018-04-17 23:19:07 -                                                 int pixelVector.[vectorIndex + 2]))
+2018-04-17 23:19:07 -         vectorIndex <- vectorIndex + 3
+2018-04-17 23:19:07 -         i <- i + 1
+2018-04-17 23:19:07 -     bitmap.Save([path; "images"; filename])
+2018-04-17 23:19:07 -     (sprintf "<img src='%s' style='width:128;height:128;'>" (combine ["images"; filename]))
+2018-04-17 23:19:07 -     |> Util.Html
+2018-04-17 23:19:07 -     |> Display
+2018-04-17 23:19:07 - This expression was expected to have type
+2018-04-17 23:19:07 -     'string'    
+2018-04-17 23:19:07 - but here has type
+2018-04-17 23:19:07 -     ''a list'    
+2018-04-17 23:19:33 - open System.Drawing
+2018-04-17 23:19:33 - let showPicture (matrix:Matrix<float>) (index:int) (filename:string) =
+2018-04-17 23:19:33 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:19:33 -     let mutable i = 0
+2018-04-17 23:19:33 -     let mutable line = -1
+2018-04-17 23:19:33 -     let mutable vectorIndex = 0
+2018-04-17 23:19:33 -     let bitmap = new Bitmap(64, 64)
+2018-04-17 23:19:33 -     while vectorIndex < pixelVector.Count - 3 do 
+2018-04-17 23:19:33 -         if i % 64 = 0 then
+2018-04-17 23:19:33 -             i <- 0
+2018-04-17 23:19:33 -             line <- line + 1
+2018-04-17 23:19:33 -             
+2018-04-17 23:19:33 -         bitmap.SetPixel(i, line, Color.FromArgb(
+2018-04-17 23:19:33 -                                                 int pixelVector.[vectorIndex],
+2018-04-17 23:19:33 -                                                 int pixelVector.[vectorIndex + 1],
+2018-04-17 23:19:33 -                                                 int pixelVector.[vectorIndex + 2]))
+2018-04-17 23:19:33 -         vectorIndex <- vectorIndex + 3
+2018-04-17 23:19:33 -         i <- i + 1
+2018-04-17 23:19:33 -     bitmap.Save(combine [path; "images"; filename])
+2018-04-17 23:19:33 -     
+2018-04-17 23:19:33 -     combine ["images"; filename]
+2018-04-17 23:19:33 -     |> sprintf "<img src='%s' style='width:128;height:128;'>"
+2018-04-17 23:19:33 -     |> Util.Html
+2018-04-17 23:19:33 -     |> Display
+2018-04-17 23:20:05 - showPicture trainX 25 "cat_25.bmp"
+2018-04-17 23:31:01 - open System.Drawing
+2018-04-17 23:31:01 - let showPicture (matrix: Matrix<float>) (index: int) (filename: string) =
+2018-04-17 23:31:01 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:31:01 -     let bitmap = new Bitmap(64, 64)
+2018-04-17 23:31:01 -     for y in [0..64] do
+2018-04-17 23:31:01 -         for x in [0..64] do
+2018-04-17 23:31:01 -             let vi = (y + 1)*(x + 1)
+2018-04-17 23:31:01 -             let color = 
+2018-04-17 23:31:01 -                 Color.FromArgb(
+2018-04-17 23:31:01 -                     int pixelVector.[vi],
+2018-04-17 23:31:01 -                     int pixelVector.[vi + 1],
+2018-04-17 23:31:01 -                     int pixelVector.[vi + 2]
+2018-04-17 23:31:01 -                 )
+2018-04-17 23:31:01 -             bitmap.SetPixel(i, line, color)
+2018-04-17 23:31:01 -         
+2018-04-17 23:31:01 -     while vectorIndex < pixelVector.Count - 3 do 
+2018-04-17 23:31:01 -         if i % 64 = 0 then
+2018-04-17 23:31:01 -             i <- 0
+2018-04-17 23:31:01 -             line <- line + 1
+2018-04-17 23:31:01 -             
+2018-04-17 23:31:01 -         vectorIndex <- vectorIndex + 3
+2018-04-17 23:31:01 -         i <- i + 1
+2018-04-17 23:31:01 -     bitmap.Save(combine [path; "images"; filename])
+2018-04-17 23:31:01 -     
+2018-04-17 23:31:01 -     combine ["images"; filename]
+2018-04-17 23:31:01 -     |> sprintf "<img src='%s' style='width:128;height:128;'>"
+2018-04-17 23:31:01 -     |> Util.Html
+2018-04-17 23:31:01 -     |> Display
+2018-04-17 23:31:01 - The value or constructor 'i' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:01 -    IO
+2018-04-17 23:31:01 -    id
+2018-04-17 23:31:01 -    it
+2018-04-17 23:31:01 -    vi
+2018-04-17 23:31:01 -    x
+2018-04-17 23:31:01 - The value or constructor 'line' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:01 -    Linq
+2018-04-17 23:31:01 - The value or constructor 'vectorIndex' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:01 -    Vector
+2018-04-17 23:31:01 -    vector
+2018-04-17 23:31:01 -    VectorBuilder
+2018-04-17 23:31:01 -    VectorExtensions
+2018-04-17 23:31:01 -    VectorModule
+2018-04-17 23:31:01 - The value or constructor 'i' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:01 -    IO
+2018-04-17 23:31:01 -    id
+2018-04-17 23:31:01 -    it
+2018-04-17 23:31:01 - The value or constructor 'i' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:01 -    IO
+2018-04-17 23:31:01 -    id
+2018-04-17 23:31:01 -    it
+2018-04-17 23:31:01 - The value or constructor 'line' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:01 -    Linq
+2018-04-17 23:31:01 - The value or constructor 'vectorIndex' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:01 -    Vector
+2018-04-17 23:31:01 -    vector
+2018-04-17 23:31:01 -    VectorBuilder
+2018-04-17 23:31:01 -    VectorExtensions
+2018-04-17 23:31:01 -    VectorModule
+2018-04-17 23:31:01 - The value or constructor 'i' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:01 -    IO
+2018-04-17 23:31:01 -    id
+2018-04-17 23:31:01 -    it
+2018-04-17 23:31:09 - open System.Drawing
+2018-04-17 23:31:09 - let showPicture (matrix: Matrix<float>) (index: int) (filename: string) =
+2018-04-17 23:31:09 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:31:09 -     let bitmap = new Bitmap(64, 64)
+2018-04-17 23:31:09 -     for y in [0..64] do
+2018-04-17 23:31:09 -         for x in [0..64] do
+2018-04-17 23:31:09 -             let vi = (y + 1)*(x + 1)
+2018-04-17 23:31:09 -             let color = 
+2018-04-17 23:31:09 -                 Color.FromArgb(
+2018-04-17 23:31:09 -                     int pixelVector.[vi],
+2018-04-17 23:31:09 -                     int pixelVector.[vi + 1],
+2018-04-17 23:31:09 -                     int pixelVector.[vi + 2]
+2018-04-17 23:31:09 -                 )
+2018-04-17 23:31:09 -             bitmap.SetPixel(x, y, color)
+2018-04-17 23:31:09 -         
+2018-04-17 23:31:09 -     while vectorIndex < pixelVector.Count - 3 do 
+2018-04-17 23:31:09 -         if i % 64 = 0 then
+2018-04-17 23:31:09 -             i <- 0
+2018-04-17 23:31:09 -             line <- line + 1
+2018-04-17 23:31:09 -             
+2018-04-17 23:31:09 -         vectorIndex <- vectorIndex + 3
+2018-04-17 23:31:09 -         i <- i + 1
+2018-04-17 23:31:09 -     bitmap.Save(combine [path; "images"; filename])
+2018-04-17 23:31:09 -     
+2018-04-17 23:31:09 -     combine ["images"; filename]
+2018-04-17 23:31:09 -     |> sprintf "<img src='%s' style='width:128;height:128;'>"
+2018-04-17 23:31:09 -     |> Util.Html
+2018-04-17 23:31:09 -     |> Display
+2018-04-17 23:31:09 - The value or constructor 'vectorIndex' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:09 -    Vector
+2018-04-17 23:31:09 -    vector
+2018-04-17 23:31:09 -    VectorBuilder
+2018-04-17 23:31:09 -    VectorExtensions
+2018-04-17 23:31:09 -    VectorModule
+2018-04-17 23:31:09 - The value or constructor 'i' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:09 -    IO
+2018-04-17 23:31:09 -    id
+2018-04-17 23:31:09 -    it
+2018-04-17 23:31:09 - The value or constructor 'i' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:09 -    IO
+2018-04-17 23:31:09 -    id
+2018-04-17 23:31:09 -    it
+2018-04-17 23:31:09 - The value or constructor 'line' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:09 -    Linq
+2018-04-17 23:31:09 - The value or constructor 'vectorIndex' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:09 -    Vector
+2018-04-17 23:31:09 -    vector
+2018-04-17 23:31:09 -    VectorBuilder
+2018-04-17 23:31:09 -    VectorExtensions
+2018-04-17 23:31:09 -    VectorModule
+2018-04-17 23:31:09 - The value or constructor 'i' is not defined. Maybe you want one of the following:
+2018-04-17 23:31:09 -    IO
+2018-04-17 23:31:09 -    id
+2018-04-17 23:31:09 -    it
+2018-04-17 23:31:19 - open System.Drawing
+2018-04-17 23:31:19 - let showPicture (matrix: Matrix<float>) (index: int) (filename: string) =
+2018-04-17 23:31:19 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:31:19 -     let bitmap = new Bitmap(64, 64)
+2018-04-17 23:31:19 -     for y in [0..64] do
+2018-04-17 23:31:19 -         for x in [0..64] do
+2018-04-17 23:31:19 -             let vi = (y + 1)*(x + 1)
+2018-04-17 23:31:19 -             let color = 
+2018-04-17 23:31:19 -                 Color.FromArgb(
+2018-04-17 23:31:19 -                     int pixelVector.[vi],
+2018-04-17 23:31:19 -                     int pixelVector.[vi + 1],
+2018-04-17 23:31:19 -                     int pixelVector.[vi + 2]
+2018-04-17 23:31:19 -                 )
+2018-04-17 23:31:19 -             bitmap.SetPixel(x, y, color)
+2018-04-17 23:31:19 -         
+2018-04-17 23:31:19 -     bitmap.Save(combine [path; "images"; filename])
+2018-04-17 23:31:19 -     
+2018-04-17 23:31:19 -     combine ["images"; filename]
+2018-04-17 23:31:19 -     |> sprintf "<img src='%s' style='width:128;height:128;'>"
+2018-04-17 23:31:19 -     |> Util.Html
+2018-04-17 23:31:19 -     |> Display
+2018-04-17 23:31:22 - showPicture trainX 25 "cat_25.bmp"
+2018-04-17 23:33:54 - // include directory, this will be replaced by the kernel
+2018-04-17 23:33:54 - #I "/usr/local/ifsharp"
+2018-04-17 23:33:54 - // load base dlls
+2018-04-17 23:33:54 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:33:54 - #r "NetMQ.dll"
+2018-04-17 23:33:54 - // open the global functions and methods
+2018-04-17 23:33:54 - open IfSharp.Kernel
+2018-04-17 23:33:54 - open IfSharp.Kernel.Globals
+2018-04-17 23:33:57 - // include directory, this will be replaced by the kernel
+2018-04-17 23:33:57 - #I "/usr/local/ifsharp"
+2018-04-17 23:33:57 - // load base dlls
+2018-04-17 23:33:57 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:33:57 - #r "NetMQ.dll"
+2018-04-17 23:33:57 - // open the global functions and methods
+2018-04-17 23:33:57 - open IfSharp.Kernel
+2018-04-17 23:33:57 - open IfSharp.Kernel.Globals
+2018-04-17 23:33:59 - shutdown request
+2018-04-17 23:34:00 - // include directory, this will be replaced by the kernel
+2018-04-17 23:34:00 - #I "/usr/local/ifsharp"
+2018-04-17 23:34:00 - // load base dlls
+2018-04-17 23:34:00 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:34:00 - #r "NetMQ.dll"
+2018-04-17 23:34:00 - // open the global functions and methods
+2018-04-17 23:34:00 - open IfSharp.Kernel
+2018-04-17 23:34:00 - open IfSharp.Kernel.Globals
+2018-04-17 23:34:02 - F# Interactive for F# 4.1
+2018-04-17 23:34:02 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 23:34:02 - For help type #help;;
+2018-04-17 23:34:02 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 23:34:02 -   seq []
+2018-04-17 23:34:02 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 23:34:02 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:34:02 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:34:31 - open FSharp.Data
+2018-04-17 23:34:31 - open FSharp.Data.CsvExtensions
+2018-04-17 23:34:31 - open MathNet.Numerics.LinearAlgebra
+2018-04-17 23:34:31 - //returns a sequence of array, first index is a pixel array, second index is a one item label array
+2018-04-17 23:34:31 - //extract and split parsed value from csv to train/test x matrix and y vector
+2018-04-17 23:34:31 - let loadDataset (input: CsvFile) =
+2018-04-17 23:34:31 -     let parseCsv (x: CsvFile) =
+2018-04-17 23:34:31 -         [|for row in x.Rows ->
+2018-04-17 23:34:31 -                 let rowValues = 
+2018-04-17 23:34:31 -                     row.Columns
+2018-04-17 23:34:31 -                     |> Seq.map float
+2018-04-17 23:34:31 -                     |> Seq.toArray
+2018-04-17 23:34:31 -                 let pixelsValues = rowValues.[1..]
+2018-04-17 23:34:31 -                 let labelValues = rowValues.[0]
+2018-04-17 23:34:31 -                 (labelValues, pixelsValues)|]
+2018-04-17 23:34:31 -     let extractY (input: (float*float[]) []) =  
+2018-04-17 23:34:31 -         input
+2018-04-17 23:34:31 -         |> Array.map fst
+2018-04-17 23:34:31 -     let extractX (input: (float*float[]) []) =
+2018-04-17 23:34:31 -         input 
+2018-04-17 23:34:31 -         |> Array.map snd
+2018-04-17 23:34:31 -     let parsedRows = parseCsv input
+2018-04-17 23:34:31 -     
+2018-04-17 23:34:31 -                 
+2018-04-17 23:34:31 -     let x = extractX parsedRows |> DenseMatrix.ofColumnArrays
+2018-04-17 23:34:31 -     let y = extractY parsedRows |> DenseVector.ofArray
+2018-04-17 23:34:31 -     
+2018-04-17 23:34:31 -     
+2018-04-17 23:34:31 -     x, y
+2018-04-17 23:34:31 - let shape = fun (matrix:Matrix<float>) -> matrix.RowCount, matrix.ColumnCount
+2018-04-17 23:34:31 - //building our datasets
+2018-04-17 23:34:31 - let train = CsvFile.Load(combine [path; "datasets"; "train.csv"], ",", ''', false, true, 0)
+2018-04-17 23:34:31 - let test =  CsvFile.Load(combine [path; "datasets"; "test.csv"], ",", ''', false, true, 0)
+2018-04-17 23:34:31 - let trainX, trainY = loadDataset train
+2018-04-17 23:34:31 - let testX, testY = loadDataset test
+2018-04-17 23:34:31 - The namespace 'CsvExtensions' is not defined.
+2018-04-17 23:34:31 - The namespace or module 'MathNet' is not defined. Maybe you want one of the following:
+2018-04-17 23:34:31 -    Math
+2018-04-17 23:34:31 - The type 'CsvFile' is not defined.
+2018-04-17 23:34:31 - The type 'CsvFile' is not defined.
+2018-04-17 23:34:31 - Type constraint mismatch. The type 
+2018-04-17 23:34:31 -     'string array'    
+2018-04-17 23:34:31 - is not compatible with type
+2018-04-17 23:34:31 -     'TableOutput'    
+2018-04-17 23:34:31 - The value, namespace, type or module 'DenseMatrix' is not defined.
+2018-04-17 23:34:31 - The value, namespace, type or module 'DenseVector' is not defined.
+2018-04-17 23:34:31 - The type 'Matrix' is not defined.
+2018-04-17 23:34:31 - Lookup on object of indeterminate type based on information prior to this program point. A type annotation may be needed prior to this program point to constrain the type of the object. This may allow the lookup to be resolved.
+2018-04-17 23:34:31 - Lookup on object of indeterminate type based on information prior to this program point. A type annotation may be needed prior to this program point to constrain the type of the object. This may allow the lookup to be resolved.
+2018-04-17 23:34:31 - The value, namespace, type or module 'CsvFile' is not defined.
+2018-04-17 23:34:31 - The value, namespace, type or module 'CsvFile' is not defined.
+2018-04-17 23:34:31 - open System.Drawing
+2018-04-17 23:34:31 - let showPicture (matrix: Matrix<float>) (index: int) (filename: string) =
+2018-04-17 23:34:31 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:34:31 -     let bitmap = new Bitmap(64, 64)
+2018-04-17 23:34:31 -     for y in 0..64 do
+2018-04-17 23:34:31 -         for x in 0..64 do
+2018-04-17 23:34:31 -             let vi = (y + 1)*(x + 1)
+2018-04-17 23:34:31 -             let color = 
+2018-04-17 23:34:31 -                 Color.FromArgb(
+2018-04-17 23:34:31 -                     int pixelVector.[vi],
+2018-04-17 23:34:31 -                     int pixelVector.[vi + 1],
+2018-04-17 23:34:31 -                     int pixelVector.[vi + 2]
+2018-04-17 23:34:31 -                 )
+2018-04-17 23:34:31 -             bitmap.SetPixel(x, y, color)
+2018-04-17 23:34:31 -         
+2018-04-17 23:34:31 -     bitmap.Save(combine [path; "images"; filename])
+2018-04-17 23:34:31 -     
+2018-04-17 23:34:31 -     combine ["images"; filename]
+2018-04-17 23:34:31 -     |> sprintf "<img src='%s' style='width:128;height:128;'>"
+2018-04-17 23:34:31 -     |> Util.Html
+2018-04-17 23:34:31 -     |> Display
+2018-04-17 23:34:31 - The type 'Matrix' is not defined.
+2018-04-17 23:34:31 - Lookup on object of indeterminate type based on information prior to this program point. A type annotation may be needed prior to this program point to constrain the type of the object. This may allow the lookup to be resolved.
+2018-04-17 23:34:31 - The operator 'expr.[idx]' has been used on an object of indeterminate type based on information prior to this program point. Consider adding further type constraints
+2018-04-17 23:34:31 - The operator 'expr.[idx]' has been used on an object of indeterminate type based on information prior to this program point. Consider adding further type constraints
+2018-04-17 23:34:31 - The operator 'expr.[idx]' has been used on an object of indeterminate type based on information prior to this program point. Consider adding further type constraints
+2018-04-17 23:34:31 - The value or constructor 'combine' is not defined.
+2018-04-17 23:34:31 - The value or constructor 'combine' is not defined.
+2018-04-17 23:34:31 - showPicture trainX 25 "cat_25.bmp"
+2018-04-17 23:34:31 - The value or constructor 'showPicture' is not defined.
+2018-04-17 23:34:48 - #load "Paket.fsx"
+2018-04-17 23:34:48 - Paket.Package [
+2018-04-17 23:34:48 -     "FsLab"
+2018-04-17 23:34:48 - ]
+2018-04-17 23:34:48 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 23:34:52 - open System
+2018-04-17 23:34:52 - let combine (a: string seq) = System.IO.Path.Combine(a |> Seq.toArray)
+2018-04-17 23:34:52 - let path = Environment.CurrentDirectory
+2018-04-17 23:34:52 - path
+2018-04-17 23:35:05 - shutdown request
+2018-04-17 23:35:06 - // include directory, this will be replaced by the kernel
+2018-04-17 23:35:06 - #I "/usr/local/ifsharp"
+2018-04-17 23:35:06 - // load base dlls
+2018-04-17 23:35:06 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:35:06 - #r "NetMQ.dll"
+2018-04-17 23:35:06 - // open the global functions and methods
+2018-04-17 23:35:06 - open IfSharp.Kernel
+2018-04-17 23:35:06 - open IfSharp.Kernel.Globals
+2018-04-17 23:35:08 - F# Interactive for F# 4.1
+2018-04-17 23:35:08 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 23:35:08 - For help type #help;;
+2018-04-17 23:35:08 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 23:35:08 -   seq []
+2018-04-17 23:35:08 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 23:35:08 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:35:08 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:35:12 - #load "Paket.fsx"
+2018-04-17 23:35:12 - Paket.Package [
+2018-04-17 23:35:12 -     "FsLab"
+2018-04-17 23:35:12 - ]
+2018-04-17 23:35:12 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 23:35:17 - open System
+2018-04-17 23:35:17 - let combine (a: string seq) = System.IO.Path.Combine(a |> Seq.toArray)
+2018-04-17 23:35:17 - let path = Environment.CurrentDirectory
+2018-04-17 23:35:17 - path
+2018-04-17 23:35:18 - open FSharp.Data
+2018-04-17 23:35:18 - open FSharp.Data.CsvExtensions
+2018-04-17 23:35:18 - open MathNet.Numerics.LinearAlgebra
+2018-04-17 23:35:18 - //returns a sequence of array, first index is a pixel array, second index is a one item label array
+2018-04-17 23:35:18 - //extract and split parsed value from csv to train/test x matrix and y vector
+2018-04-17 23:35:18 - let loadDataset (input: CsvFile) =
+2018-04-17 23:35:18 -     let parseCsv (x: CsvFile) =
+2018-04-17 23:35:18 -         [|for row in x.Rows ->
+2018-04-17 23:35:18 -                 let rowValues = 
+2018-04-17 23:35:18 -                     row.Columns
+2018-04-17 23:35:18 -                     |> Seq.map float
+2018-04-17 23:35:18 -                     |> Seq.toArray
+2018-04-17 23:35:18 -                 let pixelsValues = rowValues.[1..]
+2018-04-17 23:35:18 -                 let labelValues = rowValues.[0]
+2018-04-17 23:35:18 -                 (labelValues, pixelsValues)|]
+2018-04-17 23:35:18 -     let extractY (input: (float*float[]) []) =  
+2018-04-17 23:35:18 -         input
+2018-04-17 23:35:18 -         |> Array.map fst
+2018-04-17 23:35:18 -     let extractX (input: (float*float[]) []) =
+2018-04-17 23:35:18 -         input 
+2018-04-17 23:35:18 -         |> Array.map snd
+2018-04-17 23:35:18 -     let parsedRows = parseCsv input
+2018-04-17 23:35:18 -     
+2018-04-17 23:35:18 -                 
+2018-04-17 23:35:18 -     let x = extractX parsedRows |> DenseMatrix.ofColumnArrays
+2018-04-17 23:35:18 -     let y = extractY parsedRows |> DenseVector.ofArray
+2018-04-17 23:35:18 -     
+2018-04-17 23:35:18 -     
+2018-04-17 23:35:18 -     x, y
+2018-04-17 23:35:18 - let shape = fun (matrix:Matrix<float>) -> matrix.RowCount, matrix.ColumnCount
+2018-04-17 23:35:18 - //building our datasets
+2018-04-17 23:35:18 - let train = CsvFile.Load(combine [path; "datasets"; "train.csv"], ",", ''', false, true, 0)
+2018-04-17 23:35:18 - let test =  CsvFile.Load(combine [path; "datasets"; "test.csv"], ",", ''', false, true, 0)
+2018-04-17 23:35:18 - let trainX, trainY = loadDataset train
+2018-04-17 23:35:18 - let testX, testY = loadDataset test
+2018-04-17 23:35:20 - open System.Drawing
+2018-04-17 23:35:20 - let showPicture (matrix: Matrix<float>) (index: int) (filename: string) =
+2018-04-17 23:35:20 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:35:20 -     let bitmap = new Bitmap(64, 64)
+2018-04-17 23:35:20 -     for y in 0..64 do
+2018-04-17 23:35:20 -         for x in 0..64 do
+2018-04-17 23:35:20 -             let vi = (y + 1)*(x + 1)
+2018-04-17 23:35:20 -             let color = 
+2018-04-17 23:35:20 -                 Color.FromArgb(
+2018-04-17 23:35:20 -                     int pixelVector.[vi],
+2018-04-17 23:35:20 -                     int pixelVector.[vi + 1],
+2018-04-17 23:35:20 -                     int pixelVector.[vi + 2]
+2018-04-17 23:35:20 -                 )
+2018-04-17 23:35:20 -             bitmap.SetPixel(x, y, color)
+2018-04-17 23:35:20 -         
+2018-04-17 23:35:20 -     bitmap.Save(combine [path; "images"; filename])
+2018-04-17 23:35:20 -     
+2018-04-17 23:35:20 -     combine ["images"; filename]
+2018-04-17 23:35:20 -     |> sprintf "<img src='%s' style='width:128;height:128;'>"
+2018-04-17 23:35:20 -     |> Util.Html
+2018-04-17 23:35:20 -     |> Display
+2018-04-17 23:35:27 - showPicture trainX 25 "cat_25.bmp"
+2018-04-17 23:36:33 - // include directory, this will be replaced by the kernel
+2018-04-17 23:36:33 - #I "/usr/local/ifsharp"
+2018-04-17 23:36:33 - // load base dlls
+2018-04-17 23:36:33 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:36:33 - #r "NetMQ.dll"
+2018-04-17 23:36:33 - // open the global functions and methods
+2018-04-17 23:36:33 - open IfSharp.Kernel
+2018-04-17 23:36:33 - open IfSharp.Kernel.Globals
+2018-04-17 23:36:35 - F# Interactive for F# 4.1
+2018-04-17 23:36:35 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 23:36:35 - For help type #help;;
+2018-04-17 23:36:35 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 23:36:35 -   seq []
+2018-04-17 23:36:35 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 23:36:35 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:36:35 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:37:17 - shutdown request
+2018-04-17 23:37:18 - // include directory, this will be replaced by the kernel
+2018-04-17 23:37:18 - #I "/usr/local/ifsharp"
+2018-04-17 23:37:18 - // load base dlls
+2018-04-17 23:37:18 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:37:18 - #r "NetMQ.dll"
+2018-04-17 23:37:18 - // open the global functions and methods
+2018-04-17 23:37:18 - open IfSharp.Kernel
+2018-04-17 23:37:18 - open IfSharp.Kernel.Globals
+2018-04-17 23:37:20 - F# Interactive for F# 4.1
+2018-04-17 23:37:20 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 23:37:20 - For help type #help;;
+2018-04-17 23:37:20 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 23:37:20 -   seq []
+2018-04-17 23:37:20 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 23:37:20 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:37:20 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:37:23 - #load "Paket.fsx"
+2018-04-17 23:37:23 - Paket.Package [
+2018-04-17 23:37:23 -     "FsLab"
+2018-04-17 23:37:23 - ]
+2018-04-17 23:37:23 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 23:37:26 - open System
+2018-04-17 23:37:26 - let combine (a: string seq) = System.IO.Path.Combine(a |> Seq.toArray)
+2018-04-17 23:37:26 - let path = Environment.CurrentDirectory
+2018-04-17 23:37:26 - path
+2018-04-17 23:37:27 - open FSharp.Data
+2018-04-17 23:37:27 - open FSharp.Data.CsvExtensions
+2018-04-17 23:37:27 - open MathNet.Numerics.LinearAlgebra
+2018-04-17 23:37:27 - //returns a sequence of array, first index is a pixel array, second index is a one item label array
+2018-04-17 23:37:27 - //extract and split parsed value from csv to train/test x matrix and y vector
+2018-04-17 23:37:27 - let loadDataset (input: CsvFile) =
+2018-04-17 23:37:27 -     let parseCsv (x: CsvFile) =
+2018-04-17 23:37:27 -         [|for row in x.Rows ->
+2018-04-17 23:37:27 -                 let rowValues = 
+2018-04-17 23:37:27 -                     row.Columns
+2018-04-17 23:37:27 -                     |> Seq.map float
+2018-04-17 23:37:27 -                     |> Seq.toArray
+2018-04-17 23:37:27 -                 let pixelsValues = rowValues.[1..]
+2018-04-17 23:37:27 -                 let labelValues = rowValues.[0]
+2018-04-17 23:37:27 -                 (labelValues, pixelsValues)|]
+2018-04-17 23:37:27 -     let extractY (input: (float*float[]) []) =  
+2018-04-17 23:37:27 -         input
+2018-04-17 23:37:27 -         |> Array.map fst
+2018-04-17 23:37:27 -     let extractX (input: (float*float[]) []) =
+2018-04-17 23:37:27 -         input 
+2018-04-17 23:37:27 -         |> Array.map snd
+2018-04-17 23:37:27 -     let parsedRows = parseCsv input
+2018-04-17 23:37:27 -     
+2018-04-17 23:37:27 -                 
+2018-04-17 23:37:27 -     let x = extractX parsedRows |> DenseMatrix.ofColumnArrays
+2018-04-17 23:37:27 -     let y = extractY parsedRows |> DenseVector.ofArray
+2018-04-17 23:37:27 -     
+2018-04-17 23:37:27 -     
+2018-04-17 23:37:27 -     x, y
+2018-04-17 23:37:27 - let shape = fun (matrix:Matrix<float>) -> matrix.RowCount, matrix.ColumnCount
+2018-04-17 23:37:27 - //building our datasets
+2018-04-17 23:37:27 - let train = CsvFile.Load(combine [path; "datasets"; "train.csv"], ",", ''', false, true, 0)
+2018-04-17 23:37:27 - let test =  CsvFile.Load(combine [path; "datasets"; "test.csv"], ",", ''', false, true, 0)
+2018-04-17 23:37:27 - let trainX, trainY = loadDataset train
+2018-04-17 23:37:27 - let testX, testY = loadDataset test
+2018-04-17 23:37:32 - open System.Drawing
+2018-04-17 23:37:32 - let showPicture (matrix: Matrix<float>) (index: int) (filename: string) =
+2018-04-17 23:37:32 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:37:32 -     let bitmap = new Bitmap(64, 64)
+2018-04-17 23:37:32 -     for y in 0..64 do
+2018-04-17 23:37:32 -         for x in 0..64 do
+2018-04-17 23:37:32 -             let vi = (y + 3)*(x)
+2018-04-17 23:37:32 -             let color = 
+2018-04-17 23:37:32 -                 Color.FromArgb(
+2018-04-17 23:37:32 -                     int pixelVector.[vi],
+2018-04-17 23:37:32 -                     int pixelVector.[vi + 1],
+2018-04-17 23:37:32 -                     int pixelVector.[vi + 2]
+2018-04-17 23:37:32 -                 )
+2018-04-17 23:37:32 -             bitmap.SetPixel(x, y, color)
+2018-04-17 23:37:32 -         
+2018-04-17 23:37:32 -     bitmap.Save(combine [path; "images"; filename])
+2018-04-17 23:37:32 -     
+2018-04-17 23:37:32 -     combine ["images"; filename]
+2018-04-17 23:37:32 -     |> sprintf "<img src='%s' style='width:128;height:128;'>"
+2018-04-17 23:37:32 -     |> Util.Html
+2018-04-17 23:37:32 -     |> Display
+2018-04-17 23:37:34 - showPicture trainX 25 "cat_25.bmp"
+2018-04-17 23:44:34 - let normalizedX = normalize trainX
+2018-04-17 23:44:34 - normalizedX
+2018-04-17 23:44:34 - The value or constructor 'normalize' is not defined.
+2018-04-17 23:44:40 - let normalize (matrix: Matrix<float>) =
+2018-04-17 23:44:40 -     matrix.Map(fun v -> v / (float 255))
+2018-04-17 23:44:57 - shutdown request
+2018-04-17 23:45:03 - // include directory, this will be replaced by the kernel
+2018-04-17 23:45:03 - #I "/usr/local/ifsharp"
+2018-04-17 23:45:03 - // load base dlls
+2018-04-17 23:45:03 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:45:03 - #r "NetMQ.dll"
+2018-04-17 23:45:03 - // open the global functions and methods
+2018-04-17 23:45:03 - open IfSharp.Kernel
+2018-04-17 23:45:03 - open IfSharp.Kernel.Globals
+2018-04-17 23:45:05 - F# Interactive for F# 4.1
+2018-04-17 23:45:05 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 23:45:05 - For help type #help;;
+2018-04-17 23:45:05 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 23:45:05 -   seq []
+2018-04-17 23:45:05 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 23:45:05 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:45:05 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:45:09 - #load "Paket.fsx"
+2018-04-17 23:45:09 - Paket.Package [
+2018-04-17 23:45:09 -     "FsLab"
+2018-04-17 23:45:09 - ]
+2018-04-17 23:45:09 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 23:45:13 - open System
+2018-04-17 23:45:13 - let combine (a: string seq) = System.IO.Path.Combine(a |> Seq.toArray)
+2018-04-17 23:45:13 - let path = Environment.CurrentDirectory
+2018-04-17 23:45:13 - path
+2018-04-17 23:45:13 - open FSharp.Data
+2018-04-17 23:45:13 - open FSharp.Data.CsvExtensions
+2018-04-17 23:45:13 - open MathNet.Numerics.LinearAlgebra
+2018-04-17 23:45:13 - //returns a sequence of array, first index is a pixel array, second index is a one item label array
+2018-04-17 23:45:13 - //extract and split parsed value from csv to train/test x matrix and y vector
+2018-04-17 23:45:13 - let loadDataset (input: CsvFile) =
+2018-04-17 23:45:13 -     let parseCsv (x: CsvFile) =
+2018-04-17 23:45:13 -         [|for row in x.Rows ->
+2018-04-17 23:45:13 -                 let rowValues = 
+2018-04-17 23:45:13 -                     row.Columns
+2018-04-17 23:45:13 -                     |> Seq.map float
+2018-04-17 23:45:13 -                     |> Seq.toArray
+2018-04-17 23:45:13 -                 let pixelsValues = rowValues.[1..]
+2018-04-17 23:45:13 -                 let labelValues = rowValues.[0]
+2018-04-17 23:45:13 -                 (labelValues, pixelsValues)|]
+2018-04-17 23:45:13 -     let extractY (input: (float*float[]) []) =  
+2018-04-17 23:45:13 -         input
+2018-04-17 23:45:13 -         |> Array.map fst
+2018-04-17 23:45:13 -     let extractX (input: (float*float[]) []) =
+2018-04-17 23:45:13 -         input 
+2018-04-17 23:45:13 -         |> Array.map snd
+2018-04-17 23:45:13 -     let parsedRows = parseCsv input
+2018-04-17 23:45:13 -     
+2018-04-17 23:45:13 -                 
+2018-04-17 23:45:13 -     let x = extractX parsedRows |> DenseMatrix.ofColumnArrays
+2018-04-17 23:45:13 -     let y = extractY parsedRows |> DenseVector.ofArray
+2018-04-17 23:45:13 -     
+2018-04-17 23:45:13 -     
+2018-04-17 23:45:13 -     x, y
+2018-04-17 23:45:13 - let shape = fun (matrix:Matrix<float>) -> matrix.RowCount, matrix.ColumnCount
+2018-04-17 23:45:13 - //building our datasets
+2018-04-17 23:45:13 - let train = CsvFile.Load(combine [path; "datasets"; "train.csv"], ",", ''', false, true, 0)
+2018-04-17 23:45:13 - let test =  CsvFile.Load(combine [path; "datasets"; "test.csv"], ",", ''', false, true, 0)
+2018-04-17 23:45:13 - let trainX, trainY = loadDataset train
+2018-04-17 23:45:13 - let testX, testY = loadDataset test
+2018-04-17 23:45:15 - open System.Drawing
+2018-04-17 23:45:15 - let showPicture (matrix: Matrix<float>) (index: int) (filename: string) =
+2018-04-17 23:45:15 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:45:15 -     let bitmap = new Bitmap(64, 64)
+2018-04-17 23:45:15 -     for y in 0..64 do
+2018-04-17 23:45:15 -         for x in 0..64 do
+2018-04-17 23:45:15 -             let vi = (y + 3)*(x)
+2018-04-17 23:45:15 -             let color = 
+2018-04-17 23:45:15 -                 Color.FromArgb(
+2018-04-17 23:45:15 -                     int pixelVector.[vi],
+2018-04-17 23:45:15 -                     int pixelVector.[vi + 1],
+2018-04-17 23:45:15 -                     int pixelVector.[vi + 2]
+2018-04-17 23:45:15 -                 )
+2018-04-17 23:45:15 -             bitmap.SetPixel(x, y, color)
+2018-04-17 23:45:15 -         
+2018-04-17 23:45:15 -     bitmap.Save(combine [path; "images"; filename])
+2018-04-17 23:45:15 -     
+2018-04-17 23:45:15 -     combine ["images"; filename]
+2018-04-17 23:45:15 -     |> sprintf "<img src='%s' style='width:128;height:128;'>"
+2018-04-17 23:45:15 -     |> Util.Html
+2018-04-17 23:45:15 -     |> Display
+2018-04-17 23:45:15 - showPicture trainX 25 "cat_25.bmp"
+2018-04-17 23:45:18 - // include directory, this will be replaced by the kernel
+2018-04-17 23:45:18 - #I "/usr/local/ifsharp"
+2018-04-17 23:45:18 - // load base dlls
+2018-04-17 23:45:18 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:45:18 - #r "NetMQ.dll"
+2018-04-17 23:45:18 - // open the global functions and methods
+2018-04-17 23:45:18 - open IfSharp.Kernel
+2018-04-17 23:45:18 - open IfSharp.Kernel.Globals
+2018-04-17 23:45:20 - F# Interactive for F# 4.1
+2018-04-17 23:45:20 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 23:45:20 - For help type #help;;
+2018-04-17 23:45:20 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 23:45:20 -   seq []
+2018-04-17 23:45:20 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 23:45:20 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:45:20 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:46:12 - shutdown request
+2018-04-17 23:46:13 - // include directory, this will be replaced by the kernel
+2018-04-17 23:46:13 - #I "/usr/local/ifsharp"
+2018-04-17 23:46:13 - // load base dlls
+2018-04-17 23:46:13 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:46:13 - #r "NetMQ.dll"
+2018-04-17 23:46:13 - // open the global functions and methods
+2018-04-17 23:46:13 - open IfSharp.Kernel
+2018-04-17 23:46:13 - open IfSharp.Kernel.Globals
+2018-04-17 23:46:15 - F# Interactive for F# 4.1
+2018-04-17 23:46:15 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 23:46:15 - For help type #help;;
+2018-04-17 23:46:15 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 23:46:15 -   seq []
+2018-04-17 23:46:15 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 23:46:15 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:46:15 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:46:18 - #load "Paket.fsx"
+2018-04-17 23:46:18 - Paket.Package [
+2018-04-17 23:46:18 -     "FsLab"
+2018-04-17 23:46:18 - ]
+2018-04-17 23:46:18 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 23:46:22 - open System
+2018-04-17 23:46:22 - let combine (a: string seq) = System.IO.Path.Combine(a |> Seq.toArray)
+2018-04-17 23:46:22 - let path = Environment.CurrentDirectory
+2018-04-17 23:46:22 - path
+2018-04-17 23:46:22 - open FSharp.Data
+2018-04-17 23:46:22 - open FSharp.Data.CsvExtensions
+2018-04-17 23:46:22 - open MathNet.Numerics.LinearAlgebra
+2018-04-17 23:46:22 - //returns a sequence of array, first index is a pixel array, second index is a one item label array
+2018-04-17 23:46:22 - //extract and split parsed value from csv to train/test x matrix and y vector
+2018-04-17 23:46:22 - let loadDataset (input: CsvFile) =
+2018-04-17 23:46:22 -     let parseCsv (x: CsvFile) =
+2018-04-17 23:46:22 -         [|for row in x.Rows ->
+2018-04-17 23:46:22 -                 let rowValues = 
+2018-04-17 23:46:22 -                     row.Columns
+2018-04-17 23:46:22 -                     |> Seq.map float
+2018-04-17 23:46:22 -                     |> Seq.toArray
+2018-04-17 23:46:22 -                 let pixelsValues = rowValues.[1..]
+2018-04-17 23:46:22 -                 let labelValues = rowValues.[0]
+2018-04-17 23:46:22 -                 (labelValues, pixelsValues)|]
+2018-04-17 23:46:22 -     let extractY (input: (float*float[]) []) =  
+2018-04-17 23:46:22 -         input
+2018-04-17 23:46:22 -         |> Array.map fst
+2018-04-17 23:46:22 -     let extractX (input: (float*float[]) []) =
+2018-04-17 23:46:22 -         input 
+2018-04-17 23:46:22 -         |> Array.map snd
+2018-04-17 23:46:22 -     let parsedRows = parseCsv input
+2018-04-17 23:46:22 -     
+2018-04-17 23:46:22 -                 
+2018-04-17 23:46:22 -     let x = extractX parsedRows |> DenseMatrix.ofColumnArrays
+2018-04-17 23:46:22 -     let y = extractY parsedRows |> DenseVector.ofArray
+2018-04-17 23:46:22 -     
+2018-04-17 23:46:22 -     
+2018-04-17 23:46:22 -     x, y
+2018-04-17 23:46:22 - let shape = fun (matrix:Matrix<float>) -> matrix.RowCount, matrix.ColumnCount
+2018-04-17 23:46:22 - //building our datasets
+2018-04-17 23:46:22 - let train = CsvFile.Load(combine [path; "datasets"; "train.csv"], ",", ''', false, true, 0)
+2018-04-17 23:46:22 - let test =  CsvFile.Load(combine [path; "datasets"; "test.csv"], ",", ''', false, true, 0)
+2018-04-17 23:46:22 - let trainX, trainY = loadDataset train
+2018-04-17 23:46:22 - let testX, testY = loadDataset test
+2018-04-17 23:46:25 - open System.Drawing
+2018-04-17 23:46:25 - let showPicture (matrix: Matrix<float>) (index: int) (filename: string) =
+2018-04-17 23:46:25 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:46:25 -     let bitmap = new Bitmap(64, 64)
+2018-04-17 23:46:25 -     for y in 0..64 do
+2018-04-17 23:46:25 -         for x in 0..64 do
+2018-04-17 23:46:25 -             let vi = (y + 3)*(x)
+2018-04-17 23:46:25 -             let color = 
+2018-04-17 23:46:25 -                 Color.FromArgb(
+2018-04-17 23:46:25 -                     int pixelVector.[vi],
+2018-04-17 23:46:25 -                     int pixelVector.[vi + 1],
+2018-04-17 23:46:25 -                     int pixelVector.[vi + 2]
+2018-04-17 23:46:25 -                 )
+2018-04-17 23:46:25 -             bitmap.SetPixel(x, y, color)
+2018-04-17 23:46:25 -         
+2018-04-17 23:46:25 -     bitmap.Save(combine [path; "images"; filename])
+2018-04-17 23:46:25 -     
+2018-04-17 23:46:25 -     combine ["images"; filename]
+2018-04-17 23:46:25 -     |> sprintf "<img src='%s' style='width:128;height:128;'>"
+2018-04-17 23:46:25 -     |> Util.Html
+2018-04-17 23:46:25 -     |> Display
+2018-04-17 23:46:33 - showPicture trainX 25 "cat_25.bmp"
+2018-04-17 23:46:36 - let normalize (matrix: Matrix<float>) =
+2018-04-17 23:46:36 -     matrix.Map(fun v -> v / (float 255))
+2018-04-17 23:46:37 - let normalizedX = normalize trainX
+2018-04-17 23:46:37 - normalizedX
+2018-04-17 23:47:07 - // include directory, this will be replaced by the kernel
+2018-04-17 23:47:07 - #I "/usr/local/ifsharp"
+2018-04-17 23:47:07 - // load base dlls
+2018-04-17 23:47:07 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:47:07 - #r "NetMQ.dll"
+2018-04-17 23:47:07 - // open the global functions and methods
+2018-04-17 23:47:07 - open IfSharp.Kernel
+2018-04-17 23:47:07 - open IfSharp.Kernel.Globals
+2018-04-17 23:47:10 - F# Interactive for F# 4.1
+2018-04-17 23:47:10 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 23:47:10 - For help type #help;;
+2018-04-17 23:47:10 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 23:47:10 -   seq []
+2018-04-17 23:47:10 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 23:47:10 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:47:10 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:47:13 - #load "Paket.fsx"
+2018-04-17 23:47:13 - Paket.Package [
+2018-04-17 23:47:13 -     "FsLab"
+2018-04-17 23:47:13 - ]
+2018-04-17 23:47:13 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 23:47:17 - open System
+2018-04-17 23:47:17 - let combine (a: string seq) = System.IO.Path.Combine(a |> Seq.toArray)
+2018-04-17 23:47:17 - let path = Environment.CurrentDirectory
+2018-04-17 23:47:17 - path
+2018-04-17 23:47:17 - open FSharp.Data
+2018-04-17 23:47:17 - open FSharp.Data.CsvExtensions
+2018-04-17 23:47:17 - open MathNet.Numerics.LinearAlgebra
+2018-04-17 23:47:17 - //returns a sequence of array, first index is a pixel array, second index is a one item label array
+2018-04-17 23:47:17 - //extract and split parsed value from csv to train/test x matrix and y vector
+2018-04-17 23:47:17 - let loadDataset (input: CsvFile) =
+2018-04-17 23:47:17 -     let parseCsv (x: CsvFile) =
+2018-04-17 23:47:17 -         [|for row in x.Rows ->
+2018-04-17 23:47:17 -                 let rowValues = 
+2018-04-17 23:47:17 -                     row.Columns
+2018-04-17 23:47:17 -                     |> Seq.map float
+2018-04-17 23:47:17 -                     |> Seq.toArray
+2018-04-17 23:47:17 -                 let pixelsValues = rowValues.[1..]
+2018-04-17 23:47:17 -                 let labelValues = rowValues.[0]
+2018-04-17 23:47:17 -                 (labelValues, pixelsValues)|]
+2018-04-17 23:47:17 -     let extractY (input: (float*float[]) []) =  
+2018-04-17 23:47:17 -         input
+2018-04-17 23:47:17 -         |> Array.map fst
+2018-04-17 23:47:17 -     let extractX (input: (float*float[]) []) =
+2018-04-17 23:47:17 -         input 
+2018-04-17 23:47:17 -         |> Array.map snd
+2018-04-17 23:47:17 -     let parsedRows = parseCsv input
+2018-04-17 23:47:17 -     
+2018-04-17 23:47:17 -                 
+2018-04-17 23:47:17 -     let x = extractX parsedRows |> DenseMatrix.ofColumnArrays
+2018-04-17 23:47:17 -     let y = extractY parsedRows |> DenseVector.ofArray
+2018-04-17 23:47:17 -     
+2018-04-17 23:47:17 -     
+2018-04-17 23:47:17 -     x, y
+2018-04-17 23:47:17 - let shape = fun (matrix:Matrix<float>) -> matrix.RowCount, matrix.ColumnCount
+2018-04-17 23:47:17 - //building our datasets
+2018-04-17 23:47:17 - let train = CsvFile.Load(combine [path; "datasets"; "train.csv"], ",", ''', false, true, 0)
+2018-04-17 23:47:17 - let test =  CsvFile.Load(combine [path; "datasets"; "test.csv"], ",", ''', false, true, 0)
+2018-04-17 23:47:17 - let trainX, trainY = loadDataset train
+2018-04-17 23:47:17 - let testX, testY = loadDataset test
+2018-04-17 23:47:19 - open System.Drawing
+2018-04-17 23:47:19 - let showPicture (matrix: Matrix<float>) (index: int) (filename: string) =
+2018-04-17 23:47:19 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:47:19 -     let bitmap = new Bitmap(64, 64)
+2018-04-17 23:47:19 -     for y in 0..64 do
+2018-04-17 23:47:19 -         for x in 0..64 do
+2018-04-17 23:47:19 -             let vi = (y + 3)*(x)
+2018-04-17 23:47:19 -             let color = 
+2018-04-17 23:47:19 -                 Color.FromArgb(
+2018-04-17 23:47:19 -                     int pixelVector.[vi],
+2018-04-17 23:47:19 -                     int pixelVector.[vi + 1],
+2018-04-17 23:47:19 -                     int pixelVector.[vi + 2]
+2018-04-17 23:47:19 -                 )
+2018-04-17 23:47:19 -             bitmap.SetPixel(x, y, color)
+2018-04-17 23:47:19 -         
+2018-04-17 23:47:19 -     bitmap.Save(combine [path; "images"; filename])
+2018-04-17 23:47:19 -     
+2018-04-17 23:47:19 -     combine ["images"; filename]
+2018-04-17 23:47:19 -     |> sprintf "<img src='%s' style='width:128;height:128;'>"
+2018-04-17 23:47:19 -     |> Util.Html
+2018-04-17 23:47:19 -     |> Display
+2018-04-17 23:47:45 - let normalize (matrix: Matrix<float>) =
+2018-04-17 23:47:45 -     matrix |> Matrix.map(fun v -> v / (255.))
+2018-04-17 23:47:46 - let normalizedX = normalize trainX
+2018-04-17 23:47:58 - showPicture normalizedX 25 "cat_25.bmp"
+2018-04-17 23:48:01 - showPicture normalizedX 25 "cat_25.bmp"
+2018-04-17 23:48:16 - shutdown request
+2018-04-17 23:48:21 - // include directory, this will be replaced by the kernel
+2018-04-17 23:48:21 - #I "/usr/local/ifsharp"
+2018-04-17 23:48:21 - // load base dlls
+2018-04-17 23:48:21 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:48:21 - #r "NetMQ.dll"
+2018-04-17 23:48:21 - // open the global functions and methods
+2018-04-17 23:48:21 - open IfSharp.Kernel
+2018-04-17 23:48:21 - open IfSharp.Kernel.Globals
+2018-04-17 23:48:24 - F# Interactive for F# 4.1
+2018-04-17 23:48:24 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 23:48:24 - For help type #help;;
+2018-04-17 23:48:24 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 23:48:24 -   seq []
+2018-04-17 23:48:24 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 23:48:24 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:48:24 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:48:25 - open System.Drawing
+2018-04-17 23:48:25 - let showPicture (matrix: Matrix<float>) (index: int) (filename: string) =
+2018-04-17 23:48:25 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:48:25 -     use bitmap = new Bitmap(64, 64)
+2018-04-17 23:48:25 -     for y in 0..64 do
+2018-04-17 23:48:25 -         for x in 0..64 do
+2018-04-17 23:48:25 -             let vi = (y + 3)*(x)
+2018-04-17 23:48:25 -             let color = 
+2018-04-17 23:48:25 -                 Color.FromArgb(
+2018-04-17 23:48:25 -                     int pixelVector.[vi],
+2018-04-17 23:48:25 -                     int pixelVector.[vi + 1],
+2018-04-17 23:48:25 -                     int pixelVector.[vi + 2]
+2018-04-17 23:48:25 -                 )
+2018-04-17 23:48:25 -             bitmap.SetPixel(x, y, color)
+2018-04-17 23:48:25 -         
+2018-04-17 23:48:25 -     bitmap.Save(combine [path; "images"; filename])
+2018-04-17 23:48:25 -     
+2018-04-17 23:48:25 -     combine ["images"; filename]
+2018-04-17 23:48:25 -     |> sprintf "<img src='%s' style='width:128;height:128;'>"
+2018-04-17 23:48:25 -     |> Util.Html
+2018-04-17 23:48:25 -     |> Display
+2018-04-17 23:48:25 - The type 'Matrix' is not defined.
+2018-04-17 23:48:25 - Lookup on object of indeterminate type based on information prior to this program point. A type annotation may be needed prior to this program point to constrain the type of the object. This may allow the lookup to be resolved.
+2018-04-17 23:48:25 - The operator 'expr.[idx]' has been used on an object of indeterminate type based on information prior to this program point. Consider adding further type constraints
+2018-04-17 23:48:25 - The operator 'expr.[idx]' has been used on an object of indeterminate type based on information prior to this program point. Consider adding further type constraints
+2018-04-17 23:48:25 - The operator 'expr.[idx]' has been used on an object of indeterminate type based on information prior to this program point. Consider adding further type constraints
+2018-04-17 23:48:25 - The value or constructor 'combine' is not defined.
+2018-04-17 23:48:25 - The value or constructor 'combine' is not defined.
+2018-04-17 23:48:33 - shutdown request
+2018-04-17 23:48:34 - // include directory, this will be replaced by the kernel
+2018-04-17 23:48:34 - #I "/usr/local/ifsharp"
+2018-04-17 23:48:34 - // load base dlls
+2018-04-17 23:48:34 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:48:34 - #r "NetMQ.dll"
+2018-04-17 23:48:34 - // open the global functions and methods
+2018-04-17 23:48:34 - open IfSharp.Kernel
+2018-04-17 23:48:34 - open IfSharp.Kernel.Globals
+2018-04-17 23:48:37 - F# Interactive for F# 4.1
+2018-04-17 23:48:37 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 23:48:37 - For help type #help;;
+2018-04-17 23:48:37 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 23:48:37 -   seq []
+2018-04-17 23:48:37 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 23:48:37 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:48:37 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:48:39 - #load "Paket.fsx"
+2018-04-17 23:48:39 - Paket.Package [
+2018-04-17 23:48:39 -     "FsLab"
+2018-04-17 23:48:39 - ]
+2018-04-17 23:48:39 - #load "Paket.Generated.Refs.fsx"
+2018-04-17 23:48:43 - open System
+2018-04-17 23:48:43 - let combine (a: string seq) = System.IO.Path.Combine(a |> Seq.toArray)
+2018-04-17 23:48:43 - let path = Environment.CurrentDirectory
+2018-04-17 23:48:43 - path
+2018-04-17 23:48:44 - open FSharp.Data
+2018-04-17 23:48:44 - open FSharp.Data.CsvExtensions
+2018-04-17 23:48:44 - open MathNet.Numerics.LinearAlgebra
+2018-04-17 23:48:44 - //returns a sequence of array, first index is a pixel array, second index is a one item label array
+2018-04-17 23:48:44 - //extract and split parsed value from csv to train/test x matrix and y vector
+2018-04-17 23:48:44 - let loadDataset (input: CsvFile) =
+2018-04-17 23:48:44 -     let parseCsv (x: CsvFile) =
+2018-04-17 23:48:44 -         [|for row in x.Rows ->
+2018-04-17 23:48:44 -                 let rowValues = 
+2018-04-17 23:48:44 -                     row.Columns
+2018-04-17 23:48:44 -                     |> Seq.map float
+2018-04-17 23:48:44 -                     |> Seq.toArray
+2018-04-17 23:48:44 -                 let pixelsValues = rowValues.[1..]
+2018-04-17 23:48:44 -                 let labelValues = rowValues.[0]
+2018-04-17 23:48:44 -                 (labelValues, pixelsValues)|]
+2018-04-17 23:48:44 -     let extractY (input: (float*float[]) []) =  
+2018-04-17 23:48:44 -         input
+2018-04-17 23:48:44 -         |> Array.map fst
+2018-04-17 23:48:44 -     let extractX (input: (float*float[]) []) =
+2018-04-17 23:48:44 -         input 
+2018-04-17 23:48:44 -         |> Array.map snd
+2018-04-17 23:48:44 -     let parsedRows = parseCsv input
+2018-04-17 23:48:44 -     
+2018-04-17 23:48:44 -                 
+2018-04-17 23:48:44 -     let x = extractX parsedRows |> DenseMatrix.ofColumnArrays
+2018-04-17 23:48:44 -     let y = extractY parsedRows |> DenseVector.ofArray
+2018-04-17 23:48:44 -     
+2018-04-17 23:48:44 -     
+2018-04-17 23:48:44 -     x, y
+2018-04-17 23:48:44 - let shape = fun (matrix:Matrix<float>) -> matrix.RowCount, matrix.ColumnCount
+2018-04-17 23:48:44 - //building our datasets
+2018-04-17 23:48:44 - let train = CsvFile.Load(combine [path; "datasets"; "train.csv"], ",", ''', false, true, 0)
+2018-04-17 23:48:44 - let test =  CsvFile.Load(combine [path; "datasets"; "test.csv"], ",", ''', false, true, 0)
+2018-04-17 23:48:44 - let trainX, trainY = loadDataset train
+2018-04-17 23:48:44 - let testX, testY = loadDataset test
+2018-04-17 23:48:49 - open System.Drawing
+2018-04-17 23:48:49 - let showPicture (matrix: Matrix<float>) (index: int) (filename: string) =
+2018-04-17 23:48:49 -     let pixelVector = matrix.Column(index)
+2018-04-17 23:48:49 -     use bitmap = new Bitmap(64, 64)
+2018-04-17 23:48:49 -     for y in 0..64 do
+2018-04-17 23:48:49 -         for x in 0..64 do
+2018-04-17 23:48:49 -             let vi = (y + 3)*(x)
+2018-04-17 23:48:49 -             let color = 
+2018-04-17 23:48:49 -                 Color.FromArgb(
+2018-04-17 23:48:49 -                     int pixelVector.[vi],
+2018-04-17 23:48:49 -                     int pixelVector.[vi + 1],
+2018-04-17 23:48:49 -                     int pixelVector.[vi + 2]
+2018-04-17 23:48:49 -                 )
+2018-04-17 23:48:49 -             bitmap.SetPixel(x, y, color)
+2018-04-17 23:48:49 -         
+2018-04-17 23:48:49 -     bitmap.Save(combine [path; "images"; filename])
+2018-04-17 23:48:49 -     
+2018-04-17 23:48:49 -     combine ["images"; filename]
+2018-04-17 23:48:49 -     |> sprintf "<img src='%s' style='width:128;height:128;'>"
+2018-04-17 23:48:49 -     |> Util.Html
+2018-04-17 23:48:49 -     |> Display
+2018-04-17 23:48:52 - showPicture trainX 25 "cat_25.bmp"
+2018-04-17 23:48:55 - // include directory, this will be replaced by the kernel
+2018-04-17 23:48:55 - #I "/usr/local/ifsharp"
+2018-04-17 23:48:55 - // load base dlls
+2018-04-17 23:48:55 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:48:55 - #r "NetMQ.dll"
+2018-04-17 23:48:55 - // open the global functions and methods
+2018-04-17 23:48:55 - open IfSharp.Kernel
+2018-04-17 23:48:55 - open IfSharp.Kernel.Globals
+2018-04-17 23:48:57 - F# Interactive for F# 4.1
+2018-04-17 23:48:57 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 23:48:57 - For help type #help;;
+2018-04-17 23:48:57 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 23:48:57 -   seq []
+2018-04-17 23:48:57 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 23:48:57 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:48:57 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:48:58 - let normalize (matrix: Matrix<float>) =
+2018-04-17 23:48:58 -     matrix |> Matrix.map(fun v -> v / (255.))
+2018-04-17 23:48:58 - The type 'Matrix' is not defined.
+2018-04-17 23:48:58 - The value, namespace, type or module 'Matrix' is not defined. Maybe you want one of the following:
+2018-04-17 23:48:58 -    matrix
+2018-04-17 23:48:58 - let normalizedX = normalize trainX
+2018-04-17 23:48:58 - The value or constructor 'normalize' is not defined.
+2018-04-17 23:48:58 - showPicture normalizedX 25 "cat_25.bmp"
+2018-04-17 23:48:58 - The value or constructor 'showPicture' is not defined.
+2018-04-17 23:49:13 - shutdown request
+2018-04-17 23:49:13 - // include directory, this will be replaced by the kernel
+2018-04-17 23:49:13 - #I "/usr/local/ifsharp"
+2018-04-17 23:49:13 - // load base dlls
+2018-04-17 23:49:13 - #r "IfSharp.Kernel.dll"
+2018-04-17 23:49:13 - #r "NetMQ.dll"
+2018-04-17 23:49:13 - // open the global functions and methods
+2018-04-17 23:49:13 - open IfSharp.Kernel
+2018-04-17 23:49:13 - open IfSharp.Kernel.Globals
+2018-04-17 23:49:16 - F# Interactive for F# 4.1
+2018-04-17 23:49:16 - Freely distributed under the Apache 2.0 Open Source License
+2018-04-17 23:49:16 - For help type #help;;
+2018-04-17 23:49:16 - > val it : ResizeArray<System.Type * (obj -> seq<string * string> * string)> =
+2018-04-17 23:49:16 -   seq []
+2018-04-17 23:49:16 - --> Added '/usr/local/ifsharp' to library include path
+2018-04-17 23:49:16 - --> Referenced '/usr/local/ifsharp/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:49:16 - --> Referenced '/usr/local/ifsharp/NetMQ.dll' (file may be locked by F# Interactive process)
+2018-04-17 23:49:43 - shutdown request
